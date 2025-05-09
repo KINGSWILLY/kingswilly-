@@ -1,0 +1,35 @@
+Project Name: ArcadeRacerBT
+
+Folder Structure:
+
+Assets/ ├── _Project/ │   ├── Scenes/ │   │   ├── MainMenu.unity │   │   ├── SinglePlayer.unity │   │   └── Multiplayer.unity │   ├── Scripts/ │   │   ├── Car/ │   │   │   ├── CarController.cs │   │   │   └── CarInputHandler.cs │   │   ├── Multiplayer/ │   │   │   ├── BluetoothManager.cs │   │   │   ├── BTPlayerSync.cs │   │   │   └── BTConnectionUI.cs │   │   └── Game/ │   │       ├── RaceManager.cs │   │       ├── LapTracker.cs │   │       └── GameUI.cs │   ├── Prefabs/ │   │   ├── PlayerCar.prefab │   │   ├── AI_Car.prefab │   │   └── Track.prefab │   ├── Materials/ │   ├── Models/ │   ├── Audio/ │   └── UI/ │       ├── MainMenuUI.prefab │       └── InGameUI.prefab ├── Plugins/ │   └── AndroidBluetooth/  (Java plugin or Asset Store plugin here) └── Resources/
+
+Build Settings:
+
+Platform: Android
+
+Scenes In Build: MainMenu, SinglePlayer, Multiplayer
+
+
+Scripting Backend:
+
+IL2CPP (for Bluetooth plugin compatibility)
+
+
+Bluetooth Plugin:
+
+Use Android Java plugin to access Bluetooth APIs or integrate existing Unity Bluetooth asset.
+
+
+Note:
+
+Unity doesn't natively support Bluetooth. You must write a Java plugin or use a third-party Unity Bluetooth plugin that allows peer-to-peer communication.
+
+Multiplayer scene should assign roles (host/client) and sync position, velocity, and input data for cars.
+
+
+Optional:
+
+Add debug UI to test Bluetooth connection
+
+
